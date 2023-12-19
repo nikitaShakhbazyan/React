@@ -14,9 +14,6 @@ function Main() {
 
   const dispatch = useDispatch()
   const { list: products } = useSelector((state) => state.products);
-  const { list: categories } = useSelector((state) => state.categories);
-
-  console.log(categories)
 
   useEffect(()=>{
     dispatch(getCategories());

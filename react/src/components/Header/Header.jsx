@@ -5,7 +5,7 @@ import styles from '../../styles/Header.module.css'
 import Logo from '../../img/Logo.png'
 import Avatar from '../../img/Logo.png'
 
-const Header = () => {
+const Header = React.memo(() => {
       
   return (
     <div className={styles.header}>
@@ -23,24 +23,17 @@ const Header = () => {
             </div>
             <form className={styles.form}>
             <div className={styles.icon}></div>
-            <div className={styles.input}>
-                <input
-                 type="search" 
-                 name='search'
-                 placeholder='Search for anything'
-                 onChange={()=>{}}
-                 value=''
-                 />
-            </div>
+            {/* <div className={styles.input}>
+            </div> */}
             {false && <div className={styles.box}></div>}
             </form>
             <div className={styles.account}></div>
-            <Link to={HOME_PAGE}>Home</Link>
-            <Link to={CART_PAGE}>Cart</Link>
+            <Link className={styles.link} to={HOME_PAGE}>Home</Link>
+            <Link className={styles.link} to={CART_PAGE}>Cart</Link>
             <span className={styles.count}>2</span>
         </div>
     </div>
   )
-}
+})
 
 export default Header

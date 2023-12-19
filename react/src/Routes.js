@@ -4,6 +4,7 @@ import APP_ROUTES from "./config/routes";
 import Details from "./pages/Details/Details"
 import Categories from "./components/Categories/Categories";
 import Crypto from "./components/CryptoApi/Crypto";
+import Cart from "./pages/Cart/Cart";
 
 const AppRoutes = () => {
   return (
@@ -21,6 +22,7 @@ const AppRoutes = () => {
         <Route path="/products/:id" element={<Details />} />
         <Route path="/categories/:id" element={<Categories/>}/>
         <Route path="/crypto" element={<Crypto/>}/>
+        <Route path="/cart" element={<Cart/>}/>
 
     </Routes>
   );

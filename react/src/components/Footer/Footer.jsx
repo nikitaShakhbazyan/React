@@ -1,10 +1,10 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import styles from '../../styles/Footer.module.css'
-import { CART_PAGE, HOME_PAGE } from '../../constants/routes'
+import {HOME_PAGE } from '../../constants/routes'
 
 
-const Footer = () => {
+const Footer = React.memo(() => {
   return (
       <section className={styles.footer}>
         <div className={styles.logo}>
@@ -20,6 +20,6 @@ const Footer = () => {
       </div>
       </section>
   )
-}
+})
 
 export default Footer

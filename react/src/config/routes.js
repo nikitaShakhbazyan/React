@@ -4,6 +4,7 @@ import {
   SIGN_UP_PAGE,
   NOT_FOUND,
   PRODUCTS,
+  CART_PAGE,
 } from "../constants/routes";
 import Home from "../pages/Home/Home";
 import SignIn from "../pages/SignIn/SignIn";
@@ -13,6 +14,7 @@ import NotFound from "../pages/not-found/index";
 import AuthGuard from "../Guard/AuthGuard";
 import GustGuard from "../Guard/GustGuard";
 import Details from "../pages/Details/Details";
+import Cart from "../pages/Cart/Cart";
 
 const routes = [
   {
@@ -38,6 +40,10 @@ const routes = [
     Component:Details,
     Guard:AuthGuard
   },
+  {path:CART_PAGE,
+    Component:Cart,
+    Guard:AuthGuard
+  }
 ];
 
 export default routes;

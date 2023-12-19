@@ -14,11 +14,11 @@ const useFetch = (url) => {
           const response = await fetch(url);
   
           if (!response.ok) {
-            throw new Error('Network response was not ok');
+            throw new Error('Network response is not ok!!!');
           }
   
-          const jsonData = await response.json();
-          setData(jsonData);
+          const Data = await response.json();
+          setData(Data);
           setLoading(false);
         } catch (error) {
           setError(error);
