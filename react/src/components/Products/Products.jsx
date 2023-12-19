@@ -10,7 +10,7 @@ const Products = ({title,products = [],amount}) => {
     const itemsPerPage = 8;
 
 
-    const totalItems = products?.length || 0;
+    const totalItems = products?.length || 0; 
   const totalPages = Math.ceil(totalItems / itemsPerPage);
 
   const indexOfLastItem = currentPage * itemsPerPage;
